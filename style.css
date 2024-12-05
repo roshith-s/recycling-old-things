@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Green gradient for recycling theme */
+    color: #212121; /* Darker text for better readability */
+    text-align: center;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #212121; /* Darker header text */
+}
+
+input[type="text"], input[type="password"], input[type="checkbox"] {
+    padding: 10px;
+    margin: 10px;
+    width: 220px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#settings, #search, #alert-reminders, #support, #waste-management {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* New Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.login-card input[type="text"], .login-card input[type="password"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-card button {
+    padding: 10px;
+    width: 80%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background-color: #388E3C;
+}
+
+/* Profile Page Buttons */
+.profile-buttons button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.profile-buttons button:hover {
+    background-color: #388E3C;
+}

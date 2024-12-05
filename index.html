@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Recycling Trash App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="login-container">
+        <div class="login-card">
+            <h2>Welcome to Recycling Trash App</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile Page (Hidden initially) -->
+    <div id="profile-page" style="display: none;">
+        <h2>WELCOME TO THE RECYCLETRASH APP</h2>
+        <p>Welcome, <span id="profile-username">sajidariffrafikyuf</span>!</p>
+        <div class="profile-buttons">
+            <button id="settings-button">Settings</button>
+            <button id="search-button">Search</button>
+            <button id="alert-button">Alert Reminders</button>
+            <button id="support-button">Support</button>
+            <button id="waste-button">Waste Management</button>
+            <button id="stats-button">Stats</button> <!-- Added Stats Button -->
+        </div>
+        <button id="logout-button" onclick="logout()">Log Out</button> <!-- Log Out Button -->
+    </div>
+
+    <!-- Stats Page -->
+    <div id="stats" style="display: none;">
+        <h3>Waste Exposure Stats</h3>
+        <canvas id="waste-pie-chart"></canvas> <!-- Canvas for Pie Chart -->
+        <button onclick="closeStats()">Close</button>
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settings" style="display: none;">
+        <h3>Settings</h3>
+        <label for="new-username">Change Username:</label><br>
+        <input type="text" id="new-username" placeholder="New Username"><br>
+        <label for="new-password">Change Password:</label><br>
+        <input type="password" id="new-password" placeholder="New Password"><br>
+        <button onclick="saveSettings()">Save Changes</button><br>
+        <button onclick="closeSettings()">Close</button>
+    </div>
+
+    <!-- Search Page -->
+    <div id="search" style="display: none;">
+        <h3>Search</h3>
+        <input type="text" id="search-box" placeholder="Search..."><br>
+        <button>Search</button><br>
+        <button onclick="closeSearch()">Close</button>
+    </div>
+
+    <!-- Alert Reminders Page -->
+    <div id="alert-reminders" style="display: none;">
+        <h3>Alert Reminders: Waste Exportation</h3>
+        <form>
+            <label><input type="checkbox"> Separate Biodegradable Waste (Food Scraps)</label><br>
+            <label><input type="checkbox"> Separate Non-Biodegradable Waste (Plastic)</label><br>
+            <label><input type="checkbox"> Separate Yard Waste (Leaves, Grass)</label><br>
+            <label><input type="checkbox"> Separate Glass Waste</label><br>
+            <label><input type="checkbox"> Separate Metal Waste</label><br>
+            <label><input type="checkbox"> Separate Paper Waste</label><br>
+            <label><input type="checkbox"> Separate E-waste (Electronics)</label><br>
+            <label><input type="checkbox"> Separate Hazardous Waste (Batteries)</label><br>
+            <label><input type="checkbox"> Separate Medical Waste</label><br>
+            <label><input type="checkbox"> Separate Organic Waste for Composting</label><br>
+        </form>
+        <button onclick="closeAlertReminders()">Close</button>
+    </div>
+
+    <!-- Support Page -->
+    <div id="support" style="display: none;">
+        <h3>Support</h3>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: sajidariffrafikyuf@gmail.com</p>
+        <button onclick="closeSupport()">Close</button>
+    </div>
+
+    <!-- Waste Management Page -->
+    <div id="waste-management" style="display: none;">
+        <h3>Waste Management</h3>
+        <p>
+            Biodegradable waste includes materials that can be broken down by natural processes, such as food scraps, yard waste, and paper. These materials are typically composted or decomposed by microorganisms, returning nutrients to the soil. Non-biodegradable waste, such as plastic, metal, and glass, does not naturally decompose and often ends up in landfills. To manage these wastes, industries and homes must segregate waste, recycle non-biodegradable items, and compost biodegradable materials. Proper disposal and recycling reduce environmental impact and conserve resources.
+        </p>
+        <button onclick="closeWasteManagement()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
